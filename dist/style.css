@@ -64,7 +64,7 @@ a {
   right: 0;
   bottom: 25px;
   margin: auto;
-  background-image: url("/static/img/clock_bg.png");
+  background-image: url("../static/img/clock_bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -115,5 +115,3 @@ a {
 
 body {
   background-color: #777; }
-
-/*# sourceMappingURL=style.css.map*/

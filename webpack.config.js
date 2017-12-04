@@ -14,17 +14,20 @@ const config = {
     },
     devtool: "source-map",
     module: {
-        rules: [{
-            test: /\.sass$/,
-            use: ExtractTextPlugin.extract({
-                fallback: 'style-loader',
-                use: 'css-loader!sass-loader'
-            }, {
+        rules: [
+            {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader'
-            })
-        }]
+            },
+            {
+                test: /\.sass$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: 'css-loader!sass-loader'
+                })
+            }
+        ]
     },
     plugins: [
         extractSass,
